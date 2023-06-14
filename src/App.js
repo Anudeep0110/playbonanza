@@ -1,24 +1,33 @@
-import logo from './logo.svg';
 import './App.css';
+import '../node_modules/bootstrap/dist/css/bootstrap.css'
+import {BrowserRouter,Routes,Route} from 'react-router-dom'
+import LandingPage from './Components/LandingPage';
+import Login from './Components/Login';
+import SignUp from './Components/SignUp';
+import Games from './Components/Games';
+import Casino from './Components/Casino';
+import Riddle from './Components/Riddle'
+import Profile from './Components/Profile';
+import Temp from './Components/Temp';
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<LandingPage />}></Route>
+          <Route path='/signup' element={<SignUp />}></Route>
+          <Route path='/login' element={<Login />}></Route>
+          <Route path='/games' element={<Games />}></Route>
+          <Route path='/games/casino' element={<Casino />}></Route>
+          <Route path='/games/scratch' element={<Temp />}></Route>
+          <Route path='/games/riddle' element={<Riddle />}></Route>
+          <Route path='/profile' element={<Profile />}></Route>
+        </Routes> 
+      </BrowserRouter>
+    </>
   );
 }
 

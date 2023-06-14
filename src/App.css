@@ -2,6 +2,10 @@
   text-align: center;
 }
 
+*::selection{
+  background-color: orange;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -36,3 +40,373 @@
     transform: rotate(360deg);
   }
 }
+
+
+::-webkit-scrollbar {
+  width: 2px;
+  height:2px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: orange; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #b30000; 
+}
+
+
+.content{
+  height: 100vh;
+  width: 100vw;
+  background-size: cover;
+}
+.text-content{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  border-radius: 20px;
+  padding: 0;
+  font-size: 80px;
+  font-family: 'Expletus Sans';
+  font-weight: 800;
+}
+
+.nav-container {
+  width: 80vw;
+  background-color: rgba(255,255,255,.3);
+  height: 70px;
+  margin: 10px;
+}
+
+
+
+.glassy-background {
+  background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)),#020838, center/cover;
+}
+
+.circle {
+  width: 400px;
+  height: 400px;
+  border-radius: 0% 0% 90%;
+  background-color: #E90064;
+}
+
+.right-corner {
+  position: absolute;
+  border-radius: 90% 0% 0%;
+  right: 0;
+  bottom: 0;
+}
+
+/* Dashboard Styling */
+
+.dashboard-text {
+  min-height: 100vh;
+  padding-inline: 10vw;
+  background-size: cover;
+}
+
+.dashboard-title {
+  font-family: "Merriweather";
+  font-size: 5em;
+  color: #E90064;
+}
+
+.dashboard-body {
+  font-size: 'QuickSand';
+  font-size: 35px;
+  color: whitesmoke;
+}
+
+.dashboard-button {
+  background: transparent;
+  width: 200px;
+  height: 50px;
+  margin-block-start: 50px;
+  color: white;
+  font-size: 25px;
+  font-family: 'QuickSand';
+}
+
+.win-prizes {
+  font-size: 50px;
+}
+
+.amazon {
+  font-size: 30px;
+}
+
+.dashboard-button:hover {
+  background-color: #E90064;
+  box-shadow: 0px 0px 10px 1px #fff;
+  animation: shake .1s;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(-5px);
+  }
+}
+
+.footer {
+  height: 150px;
+  width: 100%;
+  /* bottom: 0;
+  left: 0;
+  position: absolute; */
+  background-color: rgba(255, 255, 255, 0.4);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 20px;  
+  align-items: center;
+  color: whitesmoke;
+}
+
+
+/* Login Form */
+
+.login-div{
+  background-color:white;
+  color: black;
+  height: 650px;
+  width: 900px;
+}
+
+.login-form {
+  width: 400px;
+  height: 600px;
+}
+
+.login-circle {
+  display: none;
+  width: 200px;
+  height: 200px;
+  border-radius: 0% 0% 90%;
+  background-color: #E90064;
+}
+
+.login-right-corner {
+  position: absolute;
+  border-radius: 90% 0% 0%;
+  right: 0;
+  bottom: 0;
+}
+.login-button {
+  background: transparent;
+  width: 200px;
+  height: 50px;
+  margin-block-start: 50px;
+  color: rgb(0, 0, 0);
+  font-size: 25px;
+  font-family: 'QuickSand';
+}
+
+.login-button:hover{
+  background-color: #E90064;
+  color: white;
+  box-shadow: 0px 0px 10px 1px #fff;
+  animation: shake .1s;
+}
+.form-input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid rgb(0, 0, 0);
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  width: 280px;
+  transition: 0.4s all;
+}
+
+
+.form-input:focus{
+  outline: none;
+  font-size: 22px;
+  width: 330px;
+  transition: 0.4s all;
+  border-bottom: 1px solid green;
+}
+
+.login-img {
+  display: block;
+  height: 650px;
+  width: 400px;
+}
+
+.login-outer {
+  flex-direction: row;
+}
+
+.signup {
+  height:800px;
+}
+
+.signup-img {
+  height: 800px;
+  width: 400px;
+}
+
+
+/* Profile Styling */
+
+.profile {
+  width: 800px;
+}
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:800px) {
+  .login-img{
+    display: none;
+  }
+
+  .login-outer {
+    flex-direction: column;
+  }
+
+  .login-circle{
+    display: block;
+  }
+}
+
+@media screen and (max-width:600px) {
+  .login-div {
+    width: 95vw;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+.flip-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.flip-card {
+  width: 200px;
+  height: 200px;
+  perspective: 1000px;
+  margin: 10px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.flip-card.flipped .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #f2f2f2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.flip-card-back {
+  background-color: #2196f3;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: rotateY(180deg);
+}
+
+.card-text {
+  font-size: 24px;
+  margin: 0;
+  padding: 10px;
+}
+
+
+.scratch-card {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9; /* Set card background color */
+}
+
+.scratch-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: silver;
+  transition: opacity 0.3s ease;
+}
+
+.scratch-overlay.scratched {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.scratch-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #e0e0e0; /* Set content background color */
+  cursor: crosshair;
+}
+
+.scratch-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+  font-weight: bold;
+}
+
+

@@ -28,7 +28,7 @@ const SignUp = () => {
 
     const Submitted = (e) => {
         e.preventDefault();
-        axios.post('https://playbonanza.onrender.com/signup',{uname:uname,fname:fname,email:email,pwd:pwd})
+        axios.post('http://localhost:8888/signup',{uname:uname,fname:fname,email:email,pwd:pwd})
         .then((res) => {
             console.log(res);
             if(res.data.flag){
@@ -59,7 +59,7 @@ const SignUp = () => {
 
     const CheckUsername = (e) => {
         setUname(e.target.value)
-        axios.post('https://playbonanza.onrender.com/checkusername',{uname:e.target.value})
+        axios.post('http://localhost:8888/checkusername',{uname:e.target.value})
         .then(res => {
             if(res.data.flag){
                 document.getElementById('username').style.borderBottom = "3px solid green";

@@ -8,7 +8,6 @@ import Games from './Components/Games';
 import Casino from './Components/Casino';
 import Riddle from './Components/Riddle'
 import Profile from './Components/Profile';
-import Temp from './Components/Temp';
 
 
 
@@ -22,7 +21,6 @@ function App() {
           <Route path='/login' element={<Login />}></Route>
           <Route path='/games' element={<Games />}></Route>
           <Route path='/games/casino' element={<Casino />}></Route>
-          <Route path='/games/scratch' element={<Temp />}></Route>
           <Route path='/games/riddle' element={<Riddle />}></Route>
           <Route path='/profile' element={<Profile />}></Route>
         </Routes> 

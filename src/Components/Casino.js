@@ -63,7 +63,7 @@ function Spinner(params) {
         type="vouchers";
         win = winner;
       }
-      await axios.post('https://playbonanza.onrender.com/win',{uname:uname,win:win,type:type})
+      await axios.post('http://localhost:8888/win',{uname:uname,win:win,type:type})
       .then(res => {
         console.log(res);
       }) 
@@ -73,7 +73,7 @@ function Spinner(params) {
       const key = `${process.env.REACT_APP_KEY}`
       const ubytes = CryptoJS.AES.decrypt(Cookies.get('processid'),key);
       const uname = JSON.parse(ubytes.toString(CryptoJS.enc.Utf8))
-      await axios.post('https://playbonanza.onrender.com/lose',{uname:uname})
+      await axios.post('http://localhost:8888/lose',{uname:uname})
       .then(res => {
         console.log(res);
       })

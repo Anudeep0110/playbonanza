@@ -100,7 +100,7 @@ const Riddle = () => {
                 type="vouchers";
                 win = winner;
               }
-              await axios.post('https://playbonanza.onrender.com/casino',{uname:uname,win:win,type:type}) 
+              await axios.post('http://localhost:8888/casino',{uname:uname,win:win,type:type}) 
             }, 0);
           }
           setTimeout(() => {

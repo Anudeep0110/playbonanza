@@ -78,7 +78,6 @@ const Login = () => {
                                         <input required type={'text'} className='form-input text-dark text-center mb-5' placeholder='Username' onChange={handleUsernameChange}></input>
                                         <input required type={'password'} className='form-input text-center' placeholder='Password' onChange={handlePasswordChange}></input>
                                         <p className='h6 text-danger'>{error}</p>
-                                        <p><p style={{cursor:"pointer"}} className='h6 text-start text-dark text-decoration-underline text-start' onClick={handleShow}>Forgot Password</p></p>
                                         <button className='login-button mt-3 border border-dark rounded rounded-5'>Login</button>
                                 </div>
                             </form>
@@ -88,17 +87,6 @@ const Login = () => {
                 </div>
             </div>
         </div>
-        <Modal show={show} onHide={handleClose}>
-        <Modal.Header closeButton>
-          <Modal.Title>Forgot Password</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-            <form className='text-center p-4'>
-                <input className='form-input text-center text-dark mb-5' placeholder='Enter Mail'></input>
-                <button className='login-button mt-3 h4 border border-dark rounded rounded-5'>Send reset link</button>
-            </form>
-        </Modal.Body>
-      </Modal>
       <MDBModal staticBackdrop show={toggle} setShow={setToggle} tabIndex='-1'>
             <MDBModalDialog centered>
             <MDBModalContent>

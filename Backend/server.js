@@ -69,22 +69,30 @@ app.post('/profile',(req,res) => {
 })
 
 
-app.post('/casino',(req,res) => {
+app.post('/win',(req,res) => {
     const uname = req.body.uname
     const win = req.body.win
     const type = req.body.type;
     if(type === "vouchers"){
-        db_users.findOneAndUpdate({username:uname},{$push:{vouchers:win}},{new:true,writeConcern: { w: 'majority' }})
+        db_users.findOneAndUpdate({username:uname},{$push:{vouchers:win},$inc:{played:1,wins:1}},{new:true,writeConcern: { w: 'majority' }})
         .then(response => {
             console.log(response);
         })        
     }else if(type==="coins"){
-        db_users.findOneAndUpdate({username:uname},{$inc:{coins:win}},{new:true,writeConcern: { w: 'majority' }})
+        db_users.findOneAndUpdate({username:uname},{$inc:{coins:win,played:1,wins:1}},{new:true,writeConcern: { w: 'majority' }})
         .then(response => {
             console.log(response);
         })
     }
         res.send({flag:true})
+})
+
+app.post('/lose',(req,res) => {
+    const {uname} = req.body;
+    db_users.findOneAndUpdate({username:uname},{$inc:{played:1,loses:1}},{new:true,writeConcern: { w: 'majority' }})
+        .then(response => {
+            console.log(response);
+        })
 })
 
 

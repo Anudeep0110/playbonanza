@@ -31,6 +31,12 @@ function Spinner(params) {
     "70 coins",
     "Amazon Gift Card",
     "better luck next time",
+    "better luck next time",
+    "better luck next time",
+    "better luck next time",
+    "better luck next time",
+    "better luck next time",
+    "better luck next time",
     "10 coins",
     "won uber pass",
     "better luck next time",
@@ -63,7 +69,7 @@ function Spinner(params) {
         type="vouchers";
         win = winner;
       }
-      await axios.post('http://localhost:8888/win',{uname:uname,win:win,type:type})
+      axios.post('http://localhost:8888/win',{uname:uname,win:win,type:type})
       .then(res => {
         console.log(res);
       }) 
@@ -86,7 +92,7 @@ function Spinner(params) {
     {flag && <Confetti/>} 
       <div style={{width:"100vw"}}><p className="h1 text-center mt-5 ">Spin The Wheel</p></div> 
       <div className="d-flex justify-content-between flex-wrap" style={{width:"100vw"}}>
-        <div className="d-flex border border-5 justify-content-center align-items-center flex-wrap">
+        <div className="d-flex justify-content-center align-items-center flex-wrap">
       <div className="d-flex mt-5 align-items-center" style={{width:"600px"}}>
         <WheelComponent
           segments={segments}
@@ -103,7 +109,7 @@ function Spinner(params) {
           />
       </div>  
       </div> 
-      <div className=" d-flex flex-column px-5 align-items-start" style={{gap:20}}>
+      <div className=" d-flex flex-column px-5 align-items-start w-50" style={{gap:20}}>
         <div className="d-flex justify-content-center" style={{width:"100%"}}>
         <img src={require('../Assets/Logo.png')} alt="Logo" style={{width:"200px"}} className="text-center"></img>
         </div>

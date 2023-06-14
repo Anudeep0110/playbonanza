@@ -63,12 +63,20 @@ function Spinner(params) {
         type="vouchers";
         win = winner;
       }
-      await axios.post('https://playbonanza.onrender.com/casino',{uname:uname,win:win,type:type})
+      await axios.post('https://playbonanza.onrender.com/win',{uname:uname,win:win,type:type})
       .then(res => {
         console.log(res);
       }) 
       setWish("Congratulations !")
       setmsg(`You have won ${winner}`)  
+    }else{
+      const key = `${process.env.REACT_APP_KEY}`
+      const ubytes = CryptoJS.AES.decrypt(Cookies.get('processid'),key);
+      const uname = JSON.parse(ubytes.toString(CryptoJS.enc.Utf8))
+      await axios.post('https://playbonanza.onrender.com/lose',{uname:uname})
+      .then(res => {
+        console.log(res);
+      })
     }
   };
   

@@ -45,7 +45,7 @@ const LandingPage = () => {
                         <Fade cascade duration={2000}>
                             <div className='dashboard-body win-prizes' style={{marginTop:150}}>Win Exciting Prizes !</div>
                         </Fade>
-                        <div className='d-flex flex-wrap justify-content-evenly align-item-center border' style={{width:"100vw"}}>
+                        <div className='d-flex flex-wrap justify-content-evenly align-item-center' style={{width:"100vw"}}>
                             <Fade cascade direction='left' duration={2000}>
                                 <div className='d-flex flex-column justify-content-center align-items-center'>
                                     <img alt='GiftCard' src={require('../Assets/giftcard.png')}></img>

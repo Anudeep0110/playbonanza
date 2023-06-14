@@ -104,7 +104,7 @@ const Riddle = () => {
             win = winner;
           }
 
-          axios.post('http://localhost:8888/win', { uname: uname, win: win, type: type })
+          axios.post('https://playbonanza.onrender.com/win', { uname: uname, win: win, type: type })
             .then(res => {
               console.log(res);
             });
@@ -114,7 +114,7 @@ const Riddle = () => {
         const ubytes = CryptoJS.AES.decrypt(Cookies.get('processid'), key);
         const uname = JSON.parse(ubytes.toString(CryptoJS.enc.Utf8));
 
-        axios.post('http://localhost:8888/lose', { uname: uname })
+        axios.post('https://playbonanza.onrender.com/lose', { uname: uname })
           .then(res => {
             console.log(res);
           });

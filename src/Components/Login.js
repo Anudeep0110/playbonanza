@@ -41,7 +41,7 @@ const Login = () => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        axios.post('http://localhost:8888/login',{uname:username,pwd:password})
+        axios.post('https://playbonanza.onrender.com/login',{uname:username,pwd:password})
         .then(res => {
             if(res.data.flag){
                 setMsg("Login Successful")

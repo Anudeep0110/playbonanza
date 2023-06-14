@@ -37,7 +37,7 @@ const Profile = () => {
         const key = `${process.env.REACT_APP_KEY}`
         const ubytes = CryptoJS.AES.decrypt(Cookies.get('processid'),key);
         const uname = JSON.parse(ubytes.toString(CryptoJS.enc.Utf8))
-        axios.post('http://localhost:8888/profile',{uname:uname})
+        axios.post('https://playbonanza.onrender.com/profile',{uname:uname})
         .then(res => {
             setFname(res.data.data.fullname)
             setUname(res.data.data.username)

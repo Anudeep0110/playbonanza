@@ -35,7 +35,7 @@ const SignUp = () => {
                 setMsg("Account Created Successfully !")
                 setMsg1("Thank You for joining with us !")
                 setMsg2("You will be redirected to Login in 2 seconds")
-                toggleShow();
+                // toggleShow();
                 setTimeout(() => {
                     // toggleShow()
                     setTimeout(() => {
@@ -46,7 +46,7 @@ const SignUp = () => {
                 setMsg("Signup Falied!")
                 setMsg1("Sorry for the inconvenience ! Please Try again after some time ! ")
                 setMsg2("Make sure your username is unique !")
-                toggleShow();
+                // toggleShow();
                 setTimeout(() => {
                     // toggleShow()
                     setTimeout(() => {

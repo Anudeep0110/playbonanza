@@ -28,7 +28,7 @@ const SignUp = () => {
 
     const Submitted = (e) => {
         e.preventDefault();
-        axios.post('http://localhost:8888/signup',{uname:uname,fname:fname,email:email,pwd:pwd})
+        axios.post('https://playbonanza.onrender.com/signup',{uname:uname,fname:fname,email:email,pwd:pwd})
         .then((res) => {
             console.log(res);
             if(res.data.flag){

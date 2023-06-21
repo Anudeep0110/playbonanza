@@ -16,6 +16,7 @@ app.post('/signup',async (req,res) => {
     const fname = req.body.fname
     const email = req.body.email
     const pwd = req.body.pwd
+    console.log(req.body);
     await db_users.insertMany({
         username : uname,
         password : pwd,
@@ -28,13 +29,14 @@ app.post('/signup',async (req,res) => {
         coins : 0,
         vouchers : [],
 
-    }).then(() => {
+    }).then((response) => {
         res.send({flag:true});
     })
-    .catch(() => {
+    .catch((error) => {
         res.send({flag:false});
     })
 })
+
 
 app.post('/login',async (req,res) => {
     const uname = req.body.uname;

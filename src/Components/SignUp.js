@@ -37,7 +37,7 @@ const SignUp = () => {
                 setMsg2("You will be redirected to Login in 2 seconds")
                 toggleShow();
                 setTimeout(() => {
-                    toggleShow()
+                    // toggleShow()
                     setTimeout(() => {
                         navigate('/login')
                     },500)
@@ -48,7 +48,7 @@ const SignUp = () => {
                 setMsg2("Make sure your username is unique !")
                 toggleShow();
                 setTimeout(() => {
-                    toggleShow()
+                    // toggleShow()
                     setTimeout(() => {
                         navigate('/')
                     },500)

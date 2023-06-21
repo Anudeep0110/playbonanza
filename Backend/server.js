@@ -22,7 +22,7 @@ app.post('/signup',async (req,res) => {
         fullname : fname,
         email : email,
         avatar:"av1.jpg",
-        played : "anudeep",
+        played : 0,
         wins : 0,
         loses : 0,
         coins : 0,

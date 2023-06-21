@@ -30,9 +30,11 @@ app.post('/signup',async (req,res) => {
         vouchers : [],
 
     }).then((response) => {
+        console.log(response);
         res.send({flag:true});
     })
     .catch((error) => {
+        console.log(error);
         res.send({flag:false});
     })
 })

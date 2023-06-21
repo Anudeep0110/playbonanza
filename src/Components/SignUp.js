@@ -28,32 +28,12 @@ const SignUp = () => {
 
     const Submitted = (e) => {
         e.preventDefault();
-        axios.post('https://playbonanza.onrender.com/signup',{uname:uname,fname:fname,email:email,pwd:pwd})
+        axios.post('http://localhost:8888/signup',{uname:uname,fname:fname,email:email,pwd:pwd})
         .then((res) => {
             console.log(res);
-            if(res.data.flag){
-                setMsg("Account Created Successfully !")
-                setMsg1("Thank You for joining with us !")
-                setMsg2("You will be redirected to Login in 2 seconds")
-                toggleShow();
-                setTimeout(() => {
-                    toggleShow()
-                    setTimeout(() => {
-                        navigate('/login')
-                    },500)
-                },2000)
-            }else{
-                setMsg("Signup Falied!")
-                setMsg1("Sorry for the inconvenience ! Please Try again after some time ! ")
-                setMsg2("Make sure your username is unique !")
-                toggleShow();
-                setTimeout(() => {
-                    toggleShow()
-                    setTimeout(() => {
-                        navigate('/')
-                    },500)
-                },2000)
-            }
+            // setTimeout(()=>{
+            //     navigate('/login')
+            // },500)
         })
     }
 
